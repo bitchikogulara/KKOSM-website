@@ -10,9 +10,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background: #4CAF50;
     color: white;
+}
+
+.logo img{
+    height: 100px;
+    padding-left: 10px;
+}
+
+header nav {
+    padding-right: 50px;
 }
 
 nav ul {
@@ -29,13 +37,20 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: medium;
 }
 
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background: url('media/Black_Grouse_Waterfall.jpg') no-repeat center center/cover fixed;
     text-align: center;
     color: white;
-    padding: 100px 20px;
+    padding-top: 100px;
+    padding-bottom: 400px;
+    font-weight: bold;
+}
+
+.hero *{
+    padding-bottom: 10px;
 }
 
 .cta-button {

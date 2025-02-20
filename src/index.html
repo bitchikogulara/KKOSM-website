@@ -3,68 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KKOSM - Kvemo Kartli Organisation of Scout Movement</title>
+    <title>ქქსმო - ქვემო ქართლის სკაუტური მოძრაობის ორგანიზაცია</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo">KKOSM</div>
+        
+        <div class="logo">
+            <img src="media/KKOSM_logo.png" alt="KKOSM Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#join">Join Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">ჩვენს შესახებ</a></li>
+                <li><a href="#activities">აქტივობები</a></li>
+                <li><a href="#events">ღონისძიებები</a></li>
+                <li><a href="#join">შემოგვიერთდი</a></li>
+                <li><a href="#contact">კონტაქტი</a></li>
             </ul>
         </nav>
     </header>
     
     <section class="hero">
-        <h1>Explore. Learn. Lead.</h1>
-        <p>Join the KKOSM scouting movement today!</p>
-        <a href="#join" class="cta-button">Join Now</a>
+        <h1>აღმოაჩინე, შეისწავლე, გახდი ლიდერი.</h1>
+        <h3>შემოუერთდი ქვემო ქართლის სკაუტურ მოძრაობის ორგანიზაციას.</h3>
+        <a href="#join" class="cta-button">გახდი სკაუტი</a>
     </section>
     
     <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>KKOSM is dedicated to developing leadership, survival skills, and teamwork through engaging outdoor activities.</p>
+        <h2>ჩვენს შესახებ</h2>
+        <p>ქქსმოს მიზანია ახალგაზრდებში განავითაროს ლიდერობის, თვითგადარჩენის და გუნდში მუშაობის უნარები, ამ ყველაფრის პრაქტიკაში მაქსიმალური დანერგვით.</p>
     </section>
     
     <section id="activities" class="activities">
-        <h2>Our Activities</h2>
+        <h2>ჩვენი აქტივობები</h2>
         <div class="activity-grid">
-            <div class="activity-card">Camping</div>
-            <div class="activity-card">Hiking</div>
-            <div class="activity-card">Survival Skills</div>
-            <div class="activity-card">Community Service</div>
+            <div class="activity-card">ბანაკი</div>
+            <div class="activity-card">ლაშქრობა</div>
+            <div class="activity-card">თვითგადარჩენის მასტერკლასები</div>
+            <div class="activity-card">საზოგადოებრივი სერვისები</div>
         </div>
     </section>
     
     <section id="events" class="events">
-        <h2>Upcoming Events</h2>
+        <h2>მომავალი ღონისძიებები</h2>
         <ul>
-            <li>Mountain Hike - March 15</li>
-            <li>Survival Camp - April 10</li>
-            <li>Scout Leadership Training - May 5</li>
+            <li>ლაშქრობა მთაში - 15 მარტი</li>
+            <li>თვითგადარჩენის ბანაკი - 10 აპრილი</li>
+            <li>სკაუტი ლიდერების გადამზადება - 5 მაისი</li>
         </ul>
     </section>
     
     <section id="join" class="join">
-        <h2>Join Us</h2>
-        <p>Be part of an exciting journey. Sign up and become a KKOSM Scout!</p>
-        <a href="#contact" class="cta-button">Sign Up</a>
+        <h2>შემოგვიერთი</h2>
+        <p>გახდი სკაუტური მოგზაურობის ნაწილი. დარეგისტრირდი და გახდი სკაუტი!</p>
+        <a href="#contact" class="cta-button">რეგისტრაცია</a>
     </section>
     
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
+        <h2>დაგვიკავშირდი</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="თქვენი სახელი." required>
+            <input type="email" id="email" placeholder="თქვენი ელ. ფოსტის მისამართი." required>
+            <textarea id="message" placeholder="წერილი." required></textarea>
+            <button type="submit">წერილის გაგზავნა</button>
         </form>
+        <p id="status-message"></p>
     </section>
+    <script src="scripts/contact.js"></script>
     
     <footer>
         <p>&copy; 2025 KKOSM. All rights reserved.</p>
